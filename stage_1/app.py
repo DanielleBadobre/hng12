@@ -22,6 +22,8 @@ def is_perfect(n):
     return sum(divisors) == n
 
 def is_armstrong(n):
+    if n < 0:
+        return False
     digits = [int(d) for d in str(n)]
     length = len(digits)
     return sum(d**length for d in digits) == n
