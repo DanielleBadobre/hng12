@@ -1,45 +1,44 @@
-# HNG12 API
+     ```markdown
+     # Number Classification API
 
-## Description
+     ## Description
+     This API classifies a number based on its mathematical properties and returns a fun fact.
 
-This is a simple API that returns my registered email address, the current datetime in ISO 8601 format, and the GitHub URL of the project's codebase.
+     ## Endpoint
+     `GET /api/classify-number?number=<number>`
 
-## Setup Instructions
+     ## Example Request
+     ```
+     GET /api/classify-number?number=371
+     ```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/DanielleBadobre/hng12.git
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the application:
-   ```bash
-   python app.py
-   ```
+     ## Example Response
+     ```json
+     {
+       "number": 371,
+       "is_prime": false,
+       "is_perfect": false,
+       "properties": ["armstrong", "odd"],
+       "digit_sum": 11,
+       "fun_fact": "371 is an Armstrong number because 3^3 + 7^3 + 1^3 = 371"
+     }
+     ```
 
-## API Documentation
+     ## Deployment
+     This API is deployed on Render: [https://your-render-app.onrender.com](https://your-render-app.onrender.com)
 
-### Endpoint: `GET /api`
-
-#### Response Format:
-
-```json
-{
-  "email": "your-email@example.com",
-  "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/yourusername/your-repo"
-}
-```
-
-### Example Usage:
-
-```bash
-curl -X GET https://hng12-api-uxzy.onrender.com/api
-```
-
-## Backlink
-
-https\://hng.tech/hire/python-developers
-
+     ## Setup
+     To run locally:
+     1. Clone the repository:
+        ```bash
+        git clone https://github.com/yourusername/your-repo.git
+        ```
+     2. Install dependencies:
+        ```bash
+        pip install -r requirements.txt
+        ```
+     3. Run the app:
+        ```bash
+        python app.py
+        ```
+     ```
