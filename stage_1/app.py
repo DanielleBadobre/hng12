@@ -29,7 +29,7 @@ def is_armstrong(n):
     return sum(d**length for d in digits) == n
 
 def digit_sum(n):
-    return sum(int(d) for d in str(n))
+    return sum(int(d) for d in str(abs(n)))
 
 def get_fun_fact(n):
     url = f"http://numbersapi.com/{n}/math"
