@@ -29,7 +29,7 @@ def digit_sum(n):
     return sum(int(d) for d in str(n))
 
 def get_fun_fact(n):
-    url = f"http://numbersapi.com{n}/math"
+    url = f"http://numbersapi.com/{n}/math"
     response = requests.get(url)
     return response.text
 
